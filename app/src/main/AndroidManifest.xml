@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ldl.dailyreminders">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".activities.Reminder_weatherActivity" />
+        <activity android:name=".activities.Reminder_courseActivity" />
+        <activity android:name=".activities.Reminder_clockinActivity" />
+        <activity android:name=".activities.Reminder_countdownActivity" />
+        <activity android:name=".activities.Reminder_locationActivity" />
+        <activity android:name=".activities.Reminder_timingActivity" />
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

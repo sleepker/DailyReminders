@@ -1,0 +1,61 @@
+<resources>
+    <!--app_name-->
+    <string name="app_name">DailyReminders</string>
+
+    <!--main_star-->
+    <string name="main_tv_reminders">提醒事项</string>
+    <string name="main_btn_timing">定时</string>
+    <string name="main_btn_location">位置</string>
+    <string name="main_btn_countdown">倒计时</string>
+    <string name="main_btn_clock_in">打卡</string>
+    <string name="main_btn_course">课程</string>
+    <string name="main_btn_weather">天气</string>
+    <!--main_end-->
+
+    <!--add_reminder_star-->
+    <string name="add_reminder_tv_reminders">提醒事项</string>
+    <string name="add_reminder_btn_timing">定时提醒</string>
+    <string name="add_reminder_btn_location">位置提醒</string>
+    <string name="add_reminder_btn_countdown">倒计时</string>
+    <string name="add_reminder_btn_clock_in">打卡提醒</string>
+    <string name="add_reminder_btn_course">课程提醒</string>
+    <string name="add_reminder_btn_weather">天气提醒</string>
+    <!--add_reminder_end-->
+
+    <!--user_star-->
+    <string name="user_tv_click_login">点击登录</string>
+    <string name="user_tv_validation">账户与安全</string>
+    <string name="user_tv_night">夜间模式</string>
+    <string name="user_tv_setting">设置</string>
+    <string name="user_tv_advice">反馈与建议</string>
+    <string name="user_tv_help">帮助与介绍</string>
+    <string name="user_tv_about">关于</string>
+    <!--user_end-->
+
+    <!--login_star-->
+    <string name="login_tv_skip">跳过</string>
+    <string name="login_btn_login_vx">微信登录</string>
+    <string name="login_tv_login_phone">手机号登录-></string>
+    <!--login_end-->
+
+    <!--login_star-->
+    <string name="sign_in_tv_login_or_sign">登录/注册</string>
+    <string name="sign_in_et_phone_no">手机号</string>
+    <string name="sign_in_et_verification_code">验证码</string>
+    <string name="sign_in_btn_get_verification_code">获取验证码</string>
+    <string name="sign_in_btn_login_or_sign">登录/注册</string>
+    <!--login_end-->
+
+    <!--reminder_star-->
+    <string name="reminder_tv_timing">定时提醒</string>
+    <string name="reminder_tv_location">位置提醒</string>
+    <string name="reminder_tv_countdown">倒计时</string>
+    <string name="reminder_tv_clock_in">打卡提醒</string>
+    <string name="reminder_tv_course">课程提醒</string>
+    <string name="reminder_tv_weather">天气提醒</string>
+    <string name="reminder_tv_cover">封面</string>
+    <string name="reminder_tv_save">保存</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--reminder_end-->
+</resources>

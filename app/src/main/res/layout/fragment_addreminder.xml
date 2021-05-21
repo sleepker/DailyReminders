@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AddreminderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#29629B">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_reminder_tv_reminders"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                tools:ignore="RelativeOverlap"/>
+
+            <ImageButton
+                android:id="@+id/imgBtn_add_reminder_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="@mipmap/ic_setting"
+                android:contentDescription="@null"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btn_add_reminder_timing"
+                android:text="@string/add_reminder_btn_timing"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/btn_add_reminder_location"
+                android:text="@string/add_reminder_btn_location"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/btn_add_reminder_countdown"
+                android:text="@string/add_reminder_btn_countdown"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_add_reminder_timing"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/btn_add_reminder_clock_in"
+                android:text="@string/add_reminder_btn_clock_in"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/btn_add_reminder_location"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/btn_add_reminder_course"
+                android:text="@string/add_reminder_btn_course"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_add_reminder_countdown"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="50dp"/>
+
+            <Button
+                android:id="@+id/btn_add_reminder_weather"
+                android:text="@string/add_reminder_btn_weather"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_width="120dp"
+                android:layout_height="127dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/btn_add_reminder_clock_in"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="60dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

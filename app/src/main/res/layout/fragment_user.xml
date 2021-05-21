@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.UserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#555555">
+
+            <ImageButton
+                android:id="@+id/imgBtn_user_user_avatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@mipmap/ic_user_user_avatar"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"/>
+            <TextView
+                android:id="@+id/tv_user_click_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_tv_click_login"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:layout_below="@+id/imgBtn_user_user_avatar"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_click_login"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_user_click_login"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_validation"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_validation"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_validation"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_validation"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap"/>
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_night"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_user_click_login"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_night"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_night"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_night"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_night"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap"/>
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_setting"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_user_night"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_setting"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_setting"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_setting"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap" />
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_advice"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_user_setting"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_advice"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_advice"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_advice"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_advice"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap" />
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_help"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_user_advice"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_help"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_help"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_help"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_help"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap"/>
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_about"
+                android:layout_width="280dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rl_user_help"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_user_about"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_user_about"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_tv_about"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/iv_user_about"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="RelativeOverlap" />
+                <ImageButton
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/ic_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@null"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ReminderFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="#29629B">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tv_reminders"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_fl_reminder_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="@mipmap/ic_setting"
+                android:contentDescription="@null" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            tools:ignore="ScrollViewCount,UselessParent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#000000"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_fl_reminder_timing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_timing"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btn_fl_reminder_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_location"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btn_fl_reminder_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_countdown"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btn_fl_reminder_clock_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_clock_in"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btn_fl_reminder_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_course"
+                    tools:ignore="ButtonStyle" />
+                <Button
+                    android:id="@+id/btn_fl_reminder_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/main_btn_weather"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <FrameLayout
+            android:id="@+id/fl_fl_reminder_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
