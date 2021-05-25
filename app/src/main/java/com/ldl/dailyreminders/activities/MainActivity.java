@@ -83,9 +83,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initFragment(FragmentManager fragmentManager){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fl_main_content,reminderFragment);
-        fragmentTransaction.add(R.id.fl_main_content,addreminderFragment);
-        fragmentTransaction.add(R.id.fl_main_content,userFragment);
+        if (!reminderFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_main_content,reminderFragment);
+        }
+        if (!addreminderFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_main_content,addreminderFragment);
+        }
+        if (!userFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_main_content,userFragment);
+        }
         fragmentTransaction.commit();
     }
     /**

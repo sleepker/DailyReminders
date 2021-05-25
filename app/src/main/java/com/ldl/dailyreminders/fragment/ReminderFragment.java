@@ -103,12 +103,24 @@ public class ReminderFragment extends Fragment {
 
     private void initFragment(FragmentManager fragmentManager){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,timingFragment);
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,locationFragment);
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,countdownFragment);
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,clockinFragment);
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,courseFragment);
-        fragmentTransaction.add(R.id.fl_fl_reminder_content,weatherFragment);
+        if (!timingFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,timingFragment);
+        }
+        if (!locationFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,locationFragment);
+        }
+        if (countdownFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,countdownFragment);
+        }
+        if (!clockinFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,clockinFragment);
+        }
+        if (!courseFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,courseFragment);
+        }
+        if (!weatherFragment.isAdded()){
+            fragmentTransaction.add(R.id.fl_fl_reminder_content,weatherFragment);
+        }
         fragmentTransaction.commit();
     }
     private void hideAllFragment(FragmentManager fragmentManager){
