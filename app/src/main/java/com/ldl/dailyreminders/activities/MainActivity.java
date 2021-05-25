@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.app.Fragment;
@@ -43,8 +44,13 @@ public class MainActivity extends AppCompatActivity {
         setOnClick();
         //performClick imgBtn BottomReminder
         mainBinding.includeBottom.imgBtnBottomReminder.performClick();
-
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+//        super.onSaveInstanceState(outState);
+    }
+
     /**
      * @description initView
      * @author Sleepker

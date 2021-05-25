@@ -47,10 +47,10 @@ public class ReminderFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        FragmentManager childFragmentManager = getChildFragmentManager();
-        initFragment(childFragmentManager);
-        hideAllFragment(childFragmentManager);
-        initOnClick(childFragmentManager);
+        FragmentManager FragmentManager = getFragmentManager();
+        initFragment(FragmentManager);
+        hideAllFragment(FragmentManager);
+        initOnClick(FragmentManager);
         fragmentReminderBinding.btnFlReminderTiming.performClick();
     }
 
@@ -109,7 +109,7 @@ public class ReminderFragment extends Fragment {
         if (!locationFragment.isAdded()){
             fragmentTransaction.add(R.id.fl_fl_reminder_content,locationFragment);
         }
-        if (countdownFragment.isAdded()){
+        if (!countdownFragment.isAdded()){
             fragmentTransaction.add(R.id.fl_fl_reminder_content,countdownFragment);
         }
         if (!clockinFragment.isAdded()){
