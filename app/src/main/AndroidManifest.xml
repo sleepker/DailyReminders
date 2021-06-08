@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".activities.AboutActivity"></activity>
         <activity android:name=".activities.Reminder_weatherActivity" />
         <activity android:name=".activities.Reminder_courseActivity" />
         <activity android:name=".activities.Reminder_clockinActivity" />

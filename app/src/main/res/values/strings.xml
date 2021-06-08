@@ -55,7 +55,5 @@
     <string name="reminder_tv_weather">天气提醒</string>
     <string name="reminder_tv_cover">封面</string>
     <string name="reminder_tv_save">保存</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--reminder_end-->
 </resources>
