@@ -1,8 +1,12 @@
 package com.ldl.dailyreminders.activities;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -10,10 +14,15 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ldl.dailyreminders.antity.Clock;
+import com.ldl.dailyreminders.entity.Clock;
+import com.ldl.dailyreminders.broadcast.CallAlarm;
 import com.ldl.dailyreminders.databinding.ReminderTimingBinding;
+import com.ldl.dailyreminders.fragment.TimingFragment;
+import com.ldl.dailyreminders.util.TimeAdapter;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * @author Sleepker
@@ -22,10 +31,16 @@ import java.util.Calendar;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class Reminder_timingActivity extends AppCompatActivity {
 
-    private ReminderTimingBinding reminderTimingBinding;
+    public static List<Clock> list = TimingFragment.list;
+    public static TimeAdapter timeAdapter = TimingFragment.timeAdapter;
+
     private Calendar calendar;
+
+    private ReminderTimingBinding reminderTimingBinding;
+
     String hourformat;
     String minuteformat;
+
     Clock clock = new Clock();
 
     @Override
@@ -36,8 +51,13 @@ public class Reminder_timingActivity extends AppCompatActivity {
 
         calendar = Calendar.getInstance();
         initView();
-    }
 
+    }
+/**
+ * @description 初始化
+ * @author Sleepker
+ * @time 2021/6/8 11:20
+ */
     private void initView() {
         //设置时间
         reminderTimingBinding.rlTimingSelectTime.setOnClickListener(new View.OnClickListener() {
@@ -46,8 +66,60 @@ public class Reminder_timingActivity extends AppCompatActivity {
                 setTime();
             }
         });
+        //保存
+        reminderTimingBinding.btnTimingSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveTimingReminder();
+            }
+        });
+        //返回
+        reminderTimingBinding.btnTimingShutdown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 /**
+ * @description 保存时间提醒
+ * @author Sleepker
+ * @time 2021/6/8 11:19
+ */
+    private void saveTimingReminder() {
+        //发广播
+        Intent intent = new Intent(Reminder_timingActivity.this, CallAlarm.class);
+        PendingIntent sender = PendingIntent.getBroadcast(
+                Reminder_timingActivity.this, 0, intent, 0);
+        AlarmManager am;
+        am = (AlarmManager) getSystemService(ALARM_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            if (System.currentTimeMillis()>calendar.getTimeInMillis()+40000){
+                //加24小时
+                am.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis()+86400000, sender);
+            }else {
+                am.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
+            }
+        }
+        //初始化clock
+        clock.setHour(hourformat);
+        clock.setMinute(minuteformat);
+        clock.setContent("" + reminderTimingBinding.etTimingNote.getText().toString());
+        clock.setClockType(Clock.clock_open);
+
+        if (clock.getHour()!=null&&clock.getMinute()!=null) {
+            clock.save();
+            list.add(clock);
+            timeAdapter.notifyDataSetChanged();
+            Log.e("Listnumber======",list.size()+"");
+            finish();
+        }else {
+            Toast.makeText(this, "请选择闹钟时间", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    /**
  * @description 设置时间
  * @author Sleepker
  * @time 2021/6/8 11:07

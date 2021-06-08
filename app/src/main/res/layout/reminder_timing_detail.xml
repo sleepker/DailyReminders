@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <Button
+            android:id="@+id/btn_timing_detail_shutdown"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/ic_left_arrow"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reminder_tv_timingDetail"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_timing_detail_cover"
+            android:layout_width="360dp"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:text="@string/reminder_tv_detail_cover"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#DDDADA"/>
+
+        <EditText
+            android:id="@+id/et_timing_detail_note"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_timing_detail_cover"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:hint="备注"
+            android:textAlignment="center" />
+        <RelativeLayout
+            android:id="@+id/rl_timing_detail_selectTime"
+            android:layout_width="340dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/et_timing_detail_note">
+
+            <TextView
+                android:id="@+id/tv_timing_detail_selectTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:text="选择时间"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_detail_time"
+                android:layout_toStartOf="@+id/imgBtn_timing_detail_rightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_time_detail_hour"
+                    android:textSize="20sp"
+                    android:text="00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_timing_detail_net"
+                    android:layout_toRightOf="@id/tv_time_detail_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" : "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_timing_detail_minute"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/tv_timing_detail_net"
+                    android:text="00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/imgBtn_timing_detail_rightArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/ic_arrow_right_black"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_timing_detail_save"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#46CEA0"
+            android:text="@string/reminder_tv_detail_save"
+            android:textSize="30sp"
+            android:textColor="#000000"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_timing_detail_delete"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#C36060"
+            android:text="@string/reminder_tv_detail_delete"
+            android:textSize="30sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+</LinearLayout>

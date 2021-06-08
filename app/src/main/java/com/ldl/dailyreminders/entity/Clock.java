@@ -1,4 +1,4 @@
-package com.ldl.dailyreminders.antity;
+package com.ldl.dailyreminders.entity;
 
 import org.litepal.crud.DataSupport;
 /**

@@ -56,4 +56,16 @@
     <string name="reminder_tv_cover">封面</string>
     <string name="reminder_tv_save">保存</string>
     <!--reminder_end-->
+
+    <!--reminderDetail_star-->
+    <string name="reminder_tv_timingDetail">定时提醒详情</string>
+    <string name="reminder_tv_locationDetail">位置提醒详情</string>
+    <string name="reminder_tv_countdownDetail">倒计时详情</string>
+    <string name="reminder_tv_clock_inDetail">打卡提醒详情</string>
+    <string name="reminder_tv_courseDetail">课程提醒详情</string>
+    <string name="reminder_tv_weatherDetail">天气提醒详情</string>
+    <string name="reminder_tv_detail_cover">封面</string>
+    <string name="reminder_tv_detail_save">保存</string>
+    <string name="reminder_tv_detail_delete">删除</string>
+    <!--reminderDetail_end-->
 </resources>
